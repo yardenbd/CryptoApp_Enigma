@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ButtonGroup from './components/ButtonGroup'
+import CoinsTable from './components/CoinsTable';
+import { useDispatch } from 'react-redux';
+import {coinsActions} from './store/coinsSlice'
+import {useEffect,useState} from 'react'
+import allCoins from './data.json'
 function App() {
+  const [isClicked , setIsClicked] =useState(false)
+  const [coinsToShow , setCoinsToShow]=useState('')
+  const dispatch = useDispatch() 
+  const clickHandle=()=>{
+    setIsClicked(true)
+  }
+  const coinNameHandler =(coinName)=>{
+    setCoinsToShow(coinName)
+  }
+ 
+  useEffect(()=>{
+    dispatch(coinsActions.setCoins({coins:allCoins.coins}))
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+  
+    <ButtonGroup isClicked={clickHandle} coinToShow={coinNameHandler} />
+    {!isClicked&&<h1>Press Coin button to display content</h1>}
+      {isClicked && <CoinsTable coinToDisplay={coinsToShow}/>}
+    </>
   );
 }
 

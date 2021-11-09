@@ -1,0 +1,36 @@
+{
+   "coins": [{
+"coinName":"XRP","data": [
+      { 
+          "name":"XRPAUD","value" : 1.55, "gate":"-0.57%","price":"121.8K"
+      },
+      {
+        "name":"XRPUSD", "value" : 1.13, "gate":"-0.36%","price":"4.333M"
+    },
+    {
+        "name":"XRPETH", "value" : 0.0003566, "gate":"+0.39%","price":"230.8K"
+    } 
+    ]},
+    {"coinName":"BCH","data":[
+        { 
+            "name":"BCHAUD", "value" : 929.99, "gate":"-0.05%","price":7.58
+        },{
+      
+            "name":"BCHUSD", "value" : 646.66, "gate":"-4.00%","price":9.65
+        },
+        {
+            "name":"BCHETH", "value" : 0.2040, "gate":"-3.32%","price":155.61
+        }
+    ]},
+    {"coinName":"LTC","data":[
+        { 
+            "name": "LTCAUD","value" :236.88, "gate":"-3.63%%","price":7.58
+        },
+       {
+            "name": "LTCEUR", "value" :548.56, "gate":"-4.06%","price":"1.227k"
+        },
+       {
+            "name": "LTCETH","value" : 0.05441, "gate":"-2.45%","price":590.38
+        }]
+   }]
+  }
