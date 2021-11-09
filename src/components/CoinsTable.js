@@ -34,10 +34,10 @@ export default function CoinsTable(props) {
           <TableHead >
             <TableRow>
               <StyledTableCell><div style={style}><LocalAtmIcon /> {props.coinToDisplay}</div></StyledTableCell>
-              <StyledTableCell align="right">Coin value</StyledTableCell>
-              <StyledTableCell align="right">Coin gate</StyledTableCell>
-              <StyledTableCell align="right">Coin price</StyledTableCell>
-              <StyledTableCell align="right">Mark</StyledTableCell>
+              <StyledTableCell align="right"></StyledTableCell>
+              <StyledTableCell align="right"></StyledTableCell>
+              <StyledTableCell align="right"></StyledTableCell>
+              <StyledTableCell align="right"></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>  
